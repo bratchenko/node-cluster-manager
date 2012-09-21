@@ -29,7 +29,9 @@ This will run 1 worker per CPU executing app.js.
 
 If you send SIGHUP to cluster process, it will gracefully restart workers one by one. 
 
-  kill -HUP <cluster pid>
+```bash
+  kill -HUP <cluster script pid>
+```
 
 Reloading stops if newly loaded worker exits with error. In that case previously started workers continue running and nothing bad happens.
 Worker is considered successfully started when it starts listening (worker 'listening' event) or when it runs without error for some time (defaults to 5 seconds). You can change this time in config.
