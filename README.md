@@ -1,6 +1,13 @@
 cluster-manager
 ===============
 
+Manages native `cluster` moduel.
+Automatically restarts workers and gracefully reloads them when SIGHUP is received. 
+
+You can disable automatic reload and use `clusterManager.reload` method manually.
+
+Module is designed in the way that you always have latest working version of cluster after restarting. Old workers are killed only when new are successfully started.
+
 This module is inspired by and partially copied from https://github.com/isaacs/cluster-master.
 
 Installation
