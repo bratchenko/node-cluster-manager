@@ -1,0 +1,19 @@
+{
+  "author": {
+    "name": "Danial Bratchenko",
+    "email": "bratchenko@gmail.com",
+    "url": "http://daeq.ru"
+  },
+  "name": "cluster-manager",
+  "description": "Methods for managing node.js cluster",
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/daeq/cluster-manager.git"
+  },
+  "main": "cluster-manager.js",
+  "engines": {
+    "node": ">=0.7.7"
+  },
+  "_id": "cluster-manager@0.0.1"
+}
