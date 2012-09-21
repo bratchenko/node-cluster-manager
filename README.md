@@ -1,8 +1,8 @@
 cluster-manager
 ===============
 
-Manages native `cluster` moduel.
-Automatically restarts workers and gracefully reloads them when SIGHUP is received. 
+Manages native `cluster` module.
+Automatically restarts workers and gracefully reloads them on SIGHUP. 
 
 You can disable automatic reload and use `clusterManager.reload` method manually.
 
@@ -25,16 +25,16 @@ Basic usage
   clusterManager("./app.js");
 ```
   
-This will run 1 worker per CPU executing app.js.
+This example will run 1 worker per CPU executing app.js script.
 
-If you send SIGHUP to cluster process, it will gracefully restart workers one by one. 
+If you send SIGHUP to cluster process, it gracefully restarts workers one by one. 
 
 ```bash
   kill -HUP <cluster script pid>
 ```
 
-Reloading stops if newly loaded worker exits with error. In that case previously started workers continue running and nothing bad happens.
-Worker is considered successfully started when it starts listening (worker 'listening' event) or when it runs without error for some time (defaults to 5 seconds). You can change this time in config.
+Reload stops if newly loaded worker exits with error. In that case previously started workers continue running and nothing bad happens.
+Worker is considered successfully started when it begins listening (fires 'listening' event) or when it runs without error for some time (defaults to 5 seconds). You can change this time in config.
 
 Advanced usage
 --------------
