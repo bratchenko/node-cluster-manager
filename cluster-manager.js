@@ -44,8 +44,8 @@ function clusterManager (config) {
     if(config.gracefullyStopTime) {
         gracefullyStopTime = Math.max(0, parseInt(config.gracefullyStopTime, 10) )
     }
-    if(config.successfulyStartTime) {
-        successfulyStartTime = Math.max(0, parseInt(config.successfulyStartTime, 10) ) 
+    if(config.successfullyStartTime) {
+        successfullyStartTime = Math.max(0, parseInt(config.successfullyStartTime, 10) ) 
     }
 
     cluster.setupMaster(masterConf)
